@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSB Soluções Elétricas | Engenharia Elétrica & Iluminação Premium</title>
+    <meta name="description" content="Engenharia elétrica de alta performance e design de iluminação sofisticado em Brasília. Conheça nosso catálogo de soluções elétricas premium para residências de luxo e empresas.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo-link" id="nav-logo">
+                <div class="brand-logo">
+                    <!-- Inline SVG Logo inspired by original branding -->
+                    <svg viewBox="0 0 320 90" class="svg-logo">
+                        <defs>
+                            <linearGradient id="lightning-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#FFF200" />
+                                <stop offset="100%" stop-color="#FFA800" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Black bubble background -->
+                        <path d="M90 10 H300 A10 10 0 0 1 310 20 V70 A10 10 0 0 1 300 80 H80 L90 10 Z" fill="#0B0B0B" />
+                        <!-- Golden Lightning Bolt -->
+                        <path d="M60 2 L105 10 L75 42 L102 44 L35 88 L55 49 L32 45 Z" fill="url(#lightning-grad)" filter="drop-shadow(0px 0px 8px rgba(255, 200, 0, 0.6))" />
+                        <!-- BSB Text -->
+                        <text x="115" y="52" font-family="'Outfit', sans-serif" font-weight="900" font-size="38" fill="#FFFFFF" letter-spacing="1">BSB</text>
+                        <!-- SOLUCOES ELETRICAS Text -->
+                        <text x="115" y="70" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#FFC800" letter-spacing="1.2">SOLUÇÕES ELÉTRICAS</text>
+                    </svg>
+                </div>
+            </a>
+            
+            <nav id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-item active" id="link-home">Início</a></li>
+                    <li><a href="#cookbook" class="nav-item" id="link-cookbook">Guia de Soluções</a></li>
+                    <li><a href="#simulador" class="nav-item" id="link-simulador">Diagnóstico</a></li>
+                    <li><a href="#portfolio" class="nav-item" id="link-portfolio">Nosso Trabalho</a></li>
+                    <li><a href="#sobre" class="nav-item" id="link-sobre">Sobre Nós</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20BSB%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20t%C3%A9cnico." target="_blank" class="btn btn-primary" id="btn-header-wa">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+                    </svg>
+                    <span>(61) 99697-6564</span>
+                </a>
+            </div>
+            
+            <button class="menu-toggle" id="menu-btn" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-electric-grid"></div>
+        <div class="container hero-content">
+            <div class="hero-text-wrapper">
+                <span class="badge badge-gold-glow animate-pulse">Engenharia Elétrica de Alta Performance</span>
+                <h1 class="hero-title">A sofisticação invisível por trás dos melhores projetos.</h1>
+                <p class="hero-subtitle">Instalações elétricas ultra-premium, quadros de distribuição industriais, automação avançada e iluminação cênica de altíssimo padrão em Brasília.</p>
+                <div class="hero-actions">
+                    <a href="#cookbook" class="btn btn-large btn-primary-gold" id="btn-hero-explore">Explorar Receitas Elétricas</a>
+                    <a href="#simulador" class="btn btn-large btn-outline" id="btn-hero-sim">Simular Diagnóstico</a>
+                </div>
+            </div>
+            <div class="hero-visual-wrapper">
+                <div class="electric-capsule">
+                    <div class="capsule-glow"></div>
+                    <div class="capsule-inner">
+                        <div class="visual-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">bsb-system-active.sh</span>
+                        </div>
+                        <div class="visual-body">
+                            <div class="code-line"><span class="code-kw">const</span> <span class="code-var">BSB</span> = <span class="code-kw">new</span> <span class="code-class">SolucoesEletricas</span>({</div>
+                            <div class="code-line tab-1"><span class="code-prop">seguranca</span>: <span class="code-str">"NBR 5410 Máxima"</span>,</div>
+                            <div class="code-line tab-1"><span class="code-prop">acabamento</span>: <span class="code-str">"Estética Industrial Premium"</span>,</div>
+                            <div class="code-line tab-1"><span class="code-prop">tecnologia</span>: <span class="code-str">"Smart Automation & IoT"</span>,</div>
+                            <div class="code-line tab-1"><span class="code-prop">materiais</span>: [<span class="code-str">"Schneider"</span>, <span class="code-str">"Siemens"</span>, <span class="code-str">"Clamper"</span>]</div>
+                            <div class="code-line">});</div>
+                            <div class="code-line mt-1"><span class="code-var">BSB</span>.<span class="code-method">executarProjetoPremium</span>({</div>
+                            <div class="code-line tab-1"><span class="code-prop">local</span>: <span class="code-str">"Mansão Lago Sul / Setor Noroeste"</span>,</div>
+                            <div class="code-line tab-1"><span class="code-prop">perfeicaoEstetica</span>: <span class="code-bool">true</span>,</div>
+                            <div class="code-line tab-1"><span class="code-prop">status</span>: <span class="code-str">"CONCLUÍDO_COM_EXCELÊNCIA"</span></div>
+                            <div class="code-line">});</div>
+                            
+                            <div class="status-panel mt-2">
+                                <div class="status-indicator">
+                                    <span class="pulse-dot"></span>
+                                    <span>Painéis Ativos & Estáveis</span>
+                                </div>
+                                <div class="load-bar">
+                                    <div class="load-bar-fill" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cookbook / Catálogo de Soluções -->
+    <section id="cookbook" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-category">Guia de Serviços Avançados</span>
+                <h2 class="section-title">O Cookbook de Soluções Elétricas</h2>
+                <p class="section-description">Inspirado na precisão dos manuais técnicos da Anthropic, desenvolvemos nossas soluções como "Receitas de Engenharia". Escolha uma receita elétrica e veja como resolvemos o desafio com perfeição.</p>
+            </div>
+
+            <!-- Search and Filter Controls -->
+            <div class="cookbook-controls" id="filter-controls">
+                <div class="search-wrapper">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="cookbook-search" placeholder="Buscar por problema, material ou serviço..." aria-label="Buscar receitas elétricas">
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-category="all" id="tab-all">Todas as Receitas</button>
+                    <button class="filter-tab" data-category="premium" id="tab-premium">Instalações Premium</button>
+                    <button class="filter-tab" data-category="automacao" id="tab-automacao">Automação & Luz</button>
+                    <button class="filter-tab" data-category="seguranca" id="tab-seguranca">Segurança & Laudos</button>
+                    <button class="filter-tab" data-category="preditiva" id="tab-preditiva">Laudos & Engenharia</button>
+                </div>
+            </div>
+
+            <!-- Recipes Grid -->
+            <div class="recipes-grid" id="recipes-container">
+                <!-- Dynamically generated recipes go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Recipe Modal Details Overlay -->
+    <div class="modal-overlay" id="recipe-modal" aria-hidden="true" role="dialog">
+        <div class="modal-card">
+            <button class="modal-close" id="btn-modal-close" aria-label="Fechar Modal">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-scroll-body">
+                <div class="modal-header">
+                    <div class="modal-badge-row">
+                        <span class="badge badge-gold" id="modal-category">Categoria</span>
+                        <span class="badge badge-dark" id="modal-time">Duração</span>
+                    </div>
+                    <h3 class="modal-title" id="modal-title">Título da Receita</h3>
+                    <p class="modal-subtitle" id="modal-subtitle">Resumo descritivo da solução de alta complexidade.</p>
+                </div>
+
+                <div class="modal-content-grid">
+                    <div class="modal-main-details">
+                        <!-- Problem Box -->
+                        <div class="recipe-box problem-box">
+                            <h4 class="box-title">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                </svg>
+                                Desafio / Sintoma Comum
+                            </h4>
+                            <p id="modal-problem">Texto detalhando o sintoma que o cliente enfrenta e o diagnóstico da causa-raiz elétrica.</p>
+                        </div>
+
+                        <!-- Ingredients Box -->
+                        <div class="recipe-box ingredients-box">
+                            <h4 class="box-title">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                </svg>
+                                Ingredientes Premium Utilizados
+                            </h4>
+                            <div class="ingredients-list" id="modal-ingredients">
+                                <!-- Dynamically added badges -->
+                            </div>
+                        </div>
+
+                        <!-- Instructions Box -->
+                        <div class="recipe-box instructions-box">
+                            <h4 class="box-title">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="9 11 12 14 22 4"></polyline>
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                </svg>
+                                Método de Preparo (Execução Técnica BSB)
+                            </h4>
+                            <ol class="instructions-list" id="modal-instructions-list">
+                                <!-- Dynamically added steps -->
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar with Media Gallery & CTA -->
+                    <div class="modal-sidebar">
+                        <div class="sidebar-box sticky-box">
+                            <h4 class="sidebar-box-title">Registro Real do Trabalho</h4>
+                            <p class="sidebar-box-desc">Mídias originais capturadas por nossos especialistas durante a execução desta receita.</p>
+                            
+                            <!-- Media Showcase Container -->
+                            <div class="modal-media-showcase" id="modal-media-container">
+                                <!-- Slides or media display -->
+                            </div>
+
+                            <a href="#" target="_blank" class="btn btn-primary btn-block btn-large mt-1" id="modal-wa-cta">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+                                </svg>
+                                Solicitar Esta Solução
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diagnostic Simulator Section -->
+    <section id="simulador" class="section-padding dark-section">
+        <div class="simulator-glow"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-category text-gold">Assistente Técnico Interativo</span>
+                <h2 class="section-title">Simulador de Diagnóstico Elétrico</h2>
+                <p class="section-description">Selecione o sintoma elétrico que você está identificando em seu imóvel residencial ou comercial para iniciarmos uma triagem rápida de engenharia.</p>
+            </div>
+
+            <div class="simulator-wrapper">
+                <div class="simulator-card">
+                    <!-- Step 1: Selection -->
+                    <div class="sim-step active" id="sim-step-1">
+                        <h3 class="sim-question-title">Qual é o principal sintoma ou necessidade observada?</h3>
+                        <div class="sim-options-grid">
+                            <button class="sim-option-btn" data-symptom="luz-piscando">
+                                <div class="option-icon">💡</div>
+                                <div class="option-text">
+                                    <h4>Instabilidade de Luz</h4>
+                                    <p>Lâmpadas piscam, cintilam ao dimerizar ou queimam com alta frequência.</p>
+                                </div>
+                            </button>
+                            <button class="sim-option-btn" data-symptom="disjuntor-caindo">
+                                <div class="option-icon">⚡</div>
+                                <div class="option-text">
+                                    <h4>Disjuntores caindo / Sobrecarga</h4>
+                                    <p>Disjuntores desarmam com frequência ou há cheiro de aquecimento no painel.</p>
+                                </div>
+                            </button>
+                            <button class="sim-option-btn" data-symptom="queima-chuva">
+                                <div class="option-icon">⛈️</div>
+                                <div class="option-text">
+                                    <h4>Queima por Surtos / Raios</h4>
+                                    <p>Aparelhos eletrônicos queimam sob chuvas, falta de aterramento ou proteção.</p>
+                                </div>
+                            </button>
+                            <button class="sim-option-btn" data-symptom="modernizar-qdc">
+                                <div class="option-icon">🔧</div>
+                                <div class="option-text">
+                                    <h4>Modernização Geral (Retrofit)</h4>
+                                    <p>Instalações antigas, fiação exposta ou quadro bagunçado e perigoso.</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Technical Loading Animation (for sophistication!) -->
+                    <div class="sim-step" id="sim-step-loading">
+                        <div class="loading-wrapper">
+                            <div class="electric-spinner"></div>
+                            <h4 class="loading-title">Analisando parâmetros elétricos e normativas...</h4>
+                            <p class="loading-sub">Cruzando dados técnicos com a NBR 5410 da ABNT...</p>
+                            <div class="terminal-box">
+                                <div class="terminal-text" id="terminal-sim-log">Iniciando varredura...</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Diagnostic Report Result -->
+                    <div class="sim-step" id="sim-step-result">
+                        <div class="result-header">
+                            <div class="result-icon-alert">⚠️</div>
+                            <div class="result-title-wrapper">
+                                <h3 class="result-main-title">Relatório de Pré-Diagnóstico Técnico</h3>
+                                <span class="badge badge-gold" id="result-danger-level">Risco Moderado</span>
+                            </div>
+                        </div>
+                        
+                        <div class="result-details-box">
+                            <div class="result-col">
+                                <h4>Causa Provável (Efeito Joule / Fuga):</h4>
+                                <p id="result-probable-cause">Falta de balanceamento de fases ou subdimensionamento dos condutores de cobre, gerando aquecimento crítico.</p>
+                            </div>
+                            <div class="result-col">
+                                <h4>Normativa ABNT Relacionada:</h4>
+                                <p id="result-abnt-law">NBR 5410 - Item 6.2.5 (Proteção contra sobrecorrentes e dimensionamento).</p>
+                            </div>
+                        </div>
+
+                        <div class="recommended-recipe-card">
+                            <span class="card-tag">Receita Recomendada da BSB:</span>
+                            <h4 id="result-recipe-title">Montagem de QDC Residencial Gourmet</h4>
+                            <p id="result-recipe-desc">Reestruturação completa de quadros de comando elétricos de alto padrão...</p>
+                            <button class="btn btn-primary mt-1" id="btn-view-sim-recipe">Ver Detalhes da Receita</button>
+                        </div>
+
+                        <div class="result-actions">
+                            <button class="btn btn-outline" id="btn-sim-reset">Refazer Simulação</button>
+                            <a href="#" target="_blank" class="btn btn-primary-gold" id="btn-sim-wa-cta">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+                                </svg>
+                                Chamar Engenheiro via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Gallery / Portfolio Showcase -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-category">Nosso Acabamento Estético</span>
+                <h2 class="section-title">Galeria de Execuções Reais</h2>
+                <p class="section-description">A excelência técnica de um eletricista de elite é demonstrada na precisão invisível dos quadros de energia, curvas de cabos perfeitamente alinhadas e segurança estrutural completa.</p>
+            </div>
+
+            <!-- Portfolio Grid with Photos & Videos -->
+            <div class="portfolio-grid" id="portfolio-grid-container">
+                <!-- Dynamically loaded with JS to include client files -->
+            </div>
+            
+            <div class="portfolio-more-cta text-center mt-3">
+                <p>Quer ter essa qualidade de engenharia no seu imóvel?</p>
+                <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20BSB%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%2C%20vi%20a%20galeria%20de%20trabalhos%20reais%20no%20site%20e%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico." target="_blank" class="btn btn-primary" id="btn-portfolio-wa">
+                    Falar com um Especialista Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Overlay for media zooming -->
+    <div class="lightbox-overlay" id="lightbox" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" id="btn-lightbox-close" aria-label="Fechar Galeria">&times;</button>
+        <button class="lightbox-prev" id="btn-lightbox-prev" aria-label="Anterior">&#10094;</button>
+        <div class="lightbox-content" id="lightbox-content">
+            <!-- Media inserted here dynamically -->
+        </div>
+        <button class="lightbox-next" id="btn-lightbox-next" aria-label="Próxima">&#10095;</button>
+        <div class="lightbox-caption" id="lightbox-caption">Legenda da Imagem</div>
+    </div>
+
+    <!-- About Section / Institucional -->
+    <section id="sobre" class="section-padding dark-section">
+        <div class="container sobre-grid">
+            <div class="sobre-text-wrapper">
+                <span class="section-category text-gold">Diferencial de Elite</span>
+                <h2 class="section-title text-white">Por que Engenheiros e Arquitetos escolhem a BSB?</h2>
+                <p class="sobre-p">A <strong>BSB Soluções Elétricas</strong> não realiza "remendos". Nós tratamos a eletricidade residencial e predial com o mesmo rigor, precisão e acabamento exigidos em painéis aeroespaciais e redes industriais de alta confiabilidade.</p>
+                
+                <div class="pillars-list">
+                    <div class="pillar-item">
+                        <div class="pillar-icon">📏</div>
+                        <div class="pillar-text">
+                            <h4>Conformidade NBR 5410 Rigorosa</h4>
+                            <p>Toda fiação, seção de cabos, disjuntores e aterramentos seguem rigorosamente a normativa técnica da ABNT para garantir proteção absoluta contra choques e fogo.</p>
+                        </div>
+                    </div>
+                    <div class="pillar-item">
+                        <div class="pillar-icon">💎</div>
+                        <div class="pillar-text">
+                            <h4>Estética de Acabamento Ultra-Clean</h4>
+                            <p>Organização de quadros de comando que parecem obras de arte. Cabos anilhados, caminhos retos, fixações mecânicas perfeitas.</p>
+                        </div>
+                    </div>
+                    <div class="pillar-item">
+                        <div class="pillar-icon">🛠️</div>
+                        <div class="pillar-text">
+                            <h4>Equipamentos de Teste Calibrados</h4>
+                            <p>Utilizamos termografia por infravermelho de última geração, terrômetros e megômetros calibrados para garantir diagnósticos preditivos certificados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sobre-visual-wrapper">
+                <div class="brand-showcase-box">
+                    <div class="showcase-glow"></div>
+                    <div class="showcase-inner">
+                        <div class="logo-large-wrap">
+                            <!-- Large interactive SVG logo display -->
+                            <svg viewBox="0 0 320 90" class="svg-logo-large animate-glow">
+                                <path d="M90 10 H300 A10 10 0 0 1 310 20 V70 A10 10 0 0 1 300 80 H80 L90 10 Z" fill="#060608" stroke="#FFC800" stroke-width="1.5" />
+                                <path d="M60 2 L105 10 L75 42 L102 44 L35 88 L55 49 L32 45 Z" fill="url(#lightning-grad)" />
+                                <text x="115" y="52" font-family="'Outfit', sans-serif" font-weight="900" font-size="38" fill="#FFFFFF" letter-spacing="1">BSB</text>
+                                <text x="115" y="70" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#FFC800" letter-spacing="1.2">SOLUÇÕES ELÉTRICAS</text>
+                            </svg>
+                        </div>
+                        <div class="metrics-row mt-2">
+                            <div class="metric-card">
+                                <h3>100%</h3>
+                                <p>Normativo</p>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Zero</h3>
+                                <p>Falhas de Carga</p>
+                            </div>
+                            <div class="metric-card">
+                                <h3>Elite</h3>
+                                <p>Padrão Técnico</p>
+                            </div>
+                        </div>
+                        <div class="wa-direct-panel mt-2">
+                            <p class="text-center">Fale direto com Adão, engenheiro responsável pelo padrão BSB.</p>
+                            <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20Ad%C3%A3o%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20minha%20resid%C3%AAncia." target="_blank" class="btn btn-primary btn-block" id="btn-sobre-wa">
+                                Conversar no WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Depoimentos -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-category">Depoimentos</span>
+                <h2 class="section-title">O que dizem os nossos clientes</h2>
+                <p class="section-description">A reputação da BSB baseia-se na excelência visível e no respeito absoluto pelos prazos e propriedades dos clientes.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="test-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="test-quote">"Contratei a BSB para fazer o retrofit elétrico da minha residência no Lago Sul. O trabalho de reestruturação do QDC ficou simplesmente impecável. Tudo etiquetado, balanceado e limpo. Recomendo de olhos fechados pela organização e respeito técnico."</p>
+                    <div class="test-author">
+                        <h4>Dr. Henrique Vasconcelos</h4>
+                        <span>Médico e Proprietário Residencial</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="test-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="test-quote">"Sou arquiteta de alto padrão e a BSB é minha parceira exclusiva. A precisão na execução da iluminação cênica e a montagem dos painéis inteligentes garantem que meus projetos sejam entregues sem dor de cabeça técnica."</p>
+                    <div class="test-author">
+                        <h4>Mariana Alencar</h4>
+                        <span>Alencar Arquitetura de Interiores</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="test-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="test-quote">"Tive um curto-circuito sério no meu comércio que parou as câmaras frias. A equipe da BSB veio imediatamente com aparelhos térmicos (termografia), identificou um barramento frouxo oxidado e montou um barramento provisório de forma espetacular. Salvou minha operação."</p>
+                    <div class="test-author">
+                        <h4>Roberto Cunha</h4>
+                        <span>Proprietário do Supermercado Cunha</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-bg-glow"></div>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <svg viewBox="0 0 320 90" class="svg-logo-footer">
+                    <path d="M90 10 H300 A10 10 0 0 1 310 20 V70 A10 10 0 0 1 300 80 H80 L90 10 Z" fill="#020202" />
+                    <path d="M60 2 L105 10 L75 42 L102 44 L35 88 L55 49 L32 45 Z" fill="url(#lightning-grad)" />
+                    <text x="115" y="52" font-family="'Outfit', sans-serif" font-weight="900" font-size="38" fill="#FFFFFF" letter-spacing="1">BSB</text>
+                    <text x="115" y="70" font-family="'Inter', sans-serif" font-weight="800" font-size="10.5" fill="#FFC800" letter-spacing="1.2">SOLUÇÕES ELÉTRICAS</text>
+                </svg>
+                <p class="footer-desc">Engenharia elétrica focada em segurança extrema, estética de acabamento impecável e alta tecnologia.</p>
+                <div class="social-row">
+                    <a href="https://wa.me/5561996976564" target="_blank" class="social-icon-link" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#cookbook">Catálogo de Soluções</a></li>
+                    <li><a href="#simulador">Simulador de Diagnóstico</a></li>
+                    <li><a href="#portfolio">Nosso Trabalho (Fotos & Vídeos)</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contato & Atendimento</h4>
+                <ul>
+                    <li><strong>Responsável Técnico:</strong> Adão</li>
+                    <li><strong>WhatsApp:</strong> (61) 99697-6564</li>
+                    <li><strong>Área de Atendimento:</strong> Brasília - DF (Lago Sul, Lago Norte, Noroeste, Sudoeste, Park Way, Planaltina, Sobradinho, Águas Claras e Entorno)</li>
+                    <li><strong>Horário:</strong> Segunda a Sábado - 08h às 19h (Emergências sob consulta)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 BSB Soluções Elétricas. Todos os direitos reservados. Projetado seguindo padrões máximos de engenharia e segurança ABNT.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20BSB%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico." target="_blank" class="wa-floating-btn" aria-label="Falar no WhatsApp" id="floating-whatsapp">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+        </svg>
+    </a>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
