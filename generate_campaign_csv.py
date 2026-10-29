@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Script de geração da campanha Google Ads Otimizada para BSB Elétrica.
+Compatível com o Google Ads Editor (Windows, UTF-8 BOM, sem violações de política ou CPC).
+"""
 import csv
 import os
 
@@ -7,12 +12,14 @@ target_files = [
 ]
 
 campaign_name = "BSB Elétrica - Captação Fundo de Funil"
-campaign_budget = "25"
+campaign_budget = "25.00"
+default_cpc = "3.50"
 final_url = "https://bsbeletrica.netlify.app/"
 
 headers = [
-    "Row Type", "Action", "Campaign status", "Campaign", "Campaign type", "Budget",
-    "Ad group status", "Ad group", "Keyword status", "Keyword", "Type",
+    "Row Type", "Action", "Campaign status", "Campaign", "Campaign type", "Budget", "Bid Strategy Type",
+    "Ad group status", "Ad group", "Default max. CPC", "Max CPC",
+    "Keyword status", "Keyword", "Type",
     "Ad status", "Headline 1", "Headline 2", "Headline 3", "Headline 4", "Headline 5",
     "Description 1", "Description 2", "Final URL"
 ]
@@ -35,13 +42,13 @@ ad_groups = [
             ("disjuntor caindo urgente", "Phrase")
         ],
         "ad": {
-            "h1": "Eletricista 24h em Brasília",
-            "h2": "Atendimento Rápido e Seguro",
-            "h3": "Orçamento Grátis no WhatsApp",
-            "h4": "Chegada Rápida no DF",
-            "h5": "BSB Elétrica: Padrão NBR",
-            "d1": "Emergência elétrica no DF? Disjuntor caindo ou sem luz? Atendimento rápido no WhatsApp!",
-            "d2": "Eletricista qualificado em Brasília. Chegada rápida, segurança total e preço justo."
+            "h1": "Eletricista 24 Horas DF",
+            "h2": "Atendimento Rápido no DF",
+            "h3": "Chegada em até 45 Minutos",
+            "h4": "Curto Circuito e Queda",
+            "h5": "BSB Elétrica Padrão NBR",
+            "d1": "Emergência elétrica no DF? Atendimento imediato para curto e disjuntor.",
+            "d2": "Eletricista qualificado em Brasília. Chegada rápida, segurança e preço justo."
         }
     },
     {
@@ -67,11 +74,11 @@ ad_groups = [
         "ad": {
             "h1": "Eletricista em Brasília DF",
             "h2": "Instalação Elétrica Segura",
-            "h3": "Orçamento Rápido no WhatsApp",
+            "h3": "Orçamento Rápido e Grátis",
             "h4": "Atendimento em Todo o DF",
             "h5": "BSB Soluções Elétricas",
-            "d1": "Instalações e reparos elétricos residenciais e prediais no DF com padrão de excelência.",
-            "d2": "Fiação, tomadas, disjuntores e iluminação. Atendimento com pontualidade e garantia."
+            "d1": "Instalações e reparos elétricos residenciais e prediais com excelência técnica.",
+            "d2": "Fiação, tomadas, disjuntores e iluminação. Pontualidade e garantia total no DF."
         }
     },
     {
@@ -92,12 +99,12 @@ ad_groups = [
         ],
         "ad": {
             "h1": "Troca de Disjuntores no DF",
-            "h2": "Quadro de Luz e Distribuição",
+            "h2": "Quadro de Luz e QDC no DF",
             "h3": "Montagem de QDC Residencial",
             "h4": "Instalação de DR e DPS",
-            "h5": "Peça Orçamento no WhatsApp",
-            "d1": "Seu disjuntor desarma ou esquenta? Montagem e retrofit de quadros no padrão NBR 5410.",
-            "d2": "Proteção completa para sua residência ou comércio. Chame a BSB Elétrica no WhatsApp!"
+            "h5": "Orçamento Grátis e Rápido",
+            "d1": "Disjuntor esquenta ou desarma? Montagem e retrofit de quadros na norma NBR 5410.",
+            "d2": "Proteção completa para seu imóvel. Fale agora com a equipe da BSB Elétrica!"
         }
     },
     {
@@ -121,9 +128,9 @@ ad_groups = [
             "h2": "Instalação e Homologação",
             "h3": "Desmembramento de Padrão",
             "h4": "Poste Padrão CEB no DF",
-            "h5": "Orçamento Rápido no WhatsApp",
-            "d1": "Instalação, aumento de carga e desmembramento de padrão Neoenergia em Brasília e DF.",
-            "d2": "Serviço técnico dentro de todas as normas da concessionária. Fale agora no WhatsApp!"
+            "h5": "Orçamento Direto Conosco",
+            "d1": "Instalação, aumento de carga e desmembramento de padrão Neoenergia em Brasília.",
+            "d2": "Serviço homologado dentro das normas Neoenergia e CEB. Atendimento no DF."
         }
     },
     {
@@ -141,58 +148,92 @@ ad_groups = [
             ("automacao de iluminacao df", "Phrase")
         ],
         "ad": {
-            "h1": "Iluminação Cênica e Fita LED",
+            "h1": "Iluminação e Fita LED DF",
             "h2": "Instalação em Sancas no DF",
-            "h3": "LED Dimerizável sem Flicker",
+            "h3": "LED Dimerizável sem Ruído",
             "h4": "Acabamento de Alto Padrão",
-            "h5": "Chame a BSB no WhatsApp",
-            "d1": "Instalação profissional de fitas LED, trilhos e iluminação cênica de altíssimo padrão.",
-            "d2": "Elimine ruídos e cintilação. Design luminotécnico com precisão técnica em Brasília."
+            "h5": "Chame a BSB Elétrica",
+            "d1": "Instalação técnica de fitas LED, perfis e iluminação cênica de alto padrão.",
+            "d2": "Elimine ruídos e cintilação. Design luminotécnico com precisão em Brasília DF."
         }
     }
 ]
 
+def make_row(data):
+    return [data.get(h, "") for h in headers]
+
 rows = []
+
 # 1. Campaign Row
-rows.append([
-    "Campaign", "Add", "Paused", campaign_name, "Search", campaign_budget,
-    "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-])
+rows.append(make_row({
+    "Row Type": "Campaign",
+    "Action": "Add",
+    "Campaign status": "Paused",
+    "Campaign": campaign_name,
+    "Campaign type": "Search",
+    "Budget": campaign_budget,
+    "Bid Strategy Type": "Manual CPC"
+}))
 
 # 2. Ad Group Rows
 for ag in ad_groups:
-    rows.append([
-        "Ad group", "Add", "", campaign_name, "", "",
-        "Enabled", ag["name"], "", "", "", "", "", "", "", "", "", "", "", ""
-    ])
+    rows.append(make_row({
+        "Row Type": "Ad group",
+        "Action": "Add",
+        "Campaign": campaign_name,
+        "Ad group status": "Enabled",
+        "Ad group": ag["name"],
+        "Default max. CPC": default_cpc,
+        "Max CPC": default_cpc
+    }))
 
 # 3. Keyword Rows
 for ag in ad_groups:
     for kw, kw_type in ag["keywords"]:
-        rows.append([
-            "Keyword", "Add", "", campaign_name, "", "",
-            "", ag["name"], "Enabled", kw, kw_type, "", "", "", "", "", "", "", "", ""
-        ])
+        rows.append(make_row({
+            "Row Type": "Keyword",
+            "Action": "Add",
+            "Campaign": campaign_name,
+            "Ad group": ag["name"],
+            "Keyword status": "Enabled",
+            "Keyword": kw,
+            "Type": kw_type,
+            "Max CPC": default_cpc
+        }))
 
 # 4. Responsive Search Ad Rows
 for ag in ad_groups:
     ad = ag["ad"]
-    # Validate character constraints
+    # Strict validation of constraints
     for i, h in enumerate([ad["h1"], ad["h2"], ad["h3"], ad["h4"], ad["h5"]], 1):
         assert len(h) <= 30, f"Headline {i} too long: {h} ({len(h)})"
+        assert ":" not in h, f"Headline {i} contains colon: {h}"
+        assert "whatsapp" not in h.lower(), f"Headline {i} contains trademark: {h}"
     assert len(ad["d1"]) <= 90, f"Desc 1 too long: {ad['d1']} ({len(ad['d1'])})"
     assert len(ad["d2"]) <= 90, f"Desc 2 too long: {ad['d2']} ({len(ad['d2'])})"
+    assert "whatsapp" not in ad["d1"].lower(), "Desc 1 contains trademark"
+    assert "whatsapp" not in ad["d2"].lower(), "Desc 2 contains trademark"
 
-    rows.append([
-        "Anúncio responsivo de pesquisa", "Add", "", campaign_name, "", "",
-        "", ag["name"], "", "", "", "Paused",
-        ad["h1"], ad["h2"], ad["h3"], ad["h4"], ad["h5"],
-        ad["d1"], ad["d2"], final_url
-    ])
+    rows.append(make_row({
+        "Row Type": "Anúncio responsivo de pesquisa",
+        "Action": "Add",
+        "Campaign": campaign_name,
+        "Ad group": ag["name"],
+        "Ad status": "Paused",
+        "Headline 1": ad["h1"],
+        "Headline 2": ad["h2"],
+        "Headline 3": ad["h3"],
+        "Headline 4": ad["h4"],
+        "Headline 5": ad["h5"],
+        "Description 1": ad["d1"],
+        "Description 2": ad["d2"],
+        "Final URL": final_url
+    }))
 
 for target in target_files:
     os.makedirs(os.path.dirname(target), exist_ok=True)
-    with open(target, "w", newline="", encoding="utf-8") as f:
+    # Write with utf-8-sig (UTF-8 BOM) so Windows and Google Ads Editor read accents accurately
+    with open(target, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.writer(f)
         writer.writerow(headers)
         writer.writerows(rows)
