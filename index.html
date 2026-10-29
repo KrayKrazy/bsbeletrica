@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSB Soluções Elétricas | Engenharia Elétrica & Iluminação Premium</title>
-    <meta name="description" content="Engenharia elétrica de alta performance e design de iluminação sofisticado em Brasília. Conheça nosso catálogo de soluções elétricas premium para residências de luxo e empresas.">
-    <!-- Google Fonts -->
+    <title>BSB Soluções Elétricas | Eletricista em Brasília - Residencial & Emergência</title>
+    <meta name="description" content="Eletricista de alta performance em Brasília. Atendimento rápido em quadros de distribuição, padrão Neoenergia, curto-circuito, disjuntores e iluminação cênica. Orçamento no WhatsApp.">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        // Configure seu ID de Conversão do Google Ads aqui (ex: AW-123456789)
+        gtag('config', 'AW-XXXXXXXXXX');
+    </script>
+
+    <!-- Performance Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -13,6 +28,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Top Emergency / Plantão Announcement Bar -->
+    <div class="top-announcement-bar">
+        <div class="container announcement-content">
+            <div class="announcement-left">
+                <span class="announcement-badge">⚡ PLANTÃO ELÉTRICO DF</span>
+                <span class="announcement-text">Atendimento Emergencial e Residencial em Brasília • Orçamento Rápido em até 15 min</span>
+            </div>
+            <div class="announcement-right">
+                <a href="tel:+5561996976564" class="announcement-phone" id="top-bar-phone">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+                    </svg>
+                    <span>Ligue: (61) 99697-6564</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Header / Navbar -->
     <header id="main-header">
@@ -44,12 +77,19 @@
                     <li><a href="#" class="nav-item active" id="link-home">Início</a></li>
                     <li><a href="#cookbook" class="nav-item" id="link-cookbook">Guia de Soluções</a></li>
                     <li><a href="#simulador" class="nav-item" id="link-simulador">Diagnóstico</a></li>
+                    <li><a href="#orcamento-rapido" class="nav-item" id="link-orcamento">Orçamento</a></li>
                     <li><a href="#portfolio" class="nav-item" id="link-portfolio">Nosso Trabalho</a></li>
                     <li><a href="#sobre" class="nav-item" id="link-sobre">Sobre Nós</a></li>
                 </ul>
             </nav>
 
             <div class="header-cta">
+                <a href="tel:+5561996976564" class="btn btn-outline-call" id="btn-header-call">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+                    </svg>
+                    <span>Ligar Agora</span>
+                </a>
                 <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20BSB%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20t%C3%A9cnico." target="_blank" class="btn btn-primary" id="btn-header-wa">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
@@ -72,12 +112,54 @@
         <div class="hero-electric-grid"></div>
         <div class="container hero-content">
             <div class="hero-text-wrapper">
-                <span class="badge badge-gold-glow animate-pulse">Engenharia Elétrica de Alta Performance</span>
+                <div class="hero-badge-row">
+                    <span class="badge badge-gold-glow animate-pulse">Engenharia Elétrica de Alta Performance</span>
+                    <span class="badge badge-outline-highlight">Atendimento em Brasília & Entorno</span>
+                </div>
                 <h1 class="hero-title">A sofisticação invisível por trás dos melhores projetos.</h1>
-                <p class="hero-subtitle">Instalações elétricas ultra-premium, quadros de distribuição industriais, automação avançada e iluminação cênica de altíssimo padrão em Brasília.</p>
+                <p class="hero-subtitle">Instalações elétricas residenciais e prediais de alto padrão em Brasília. Quadros de distribuição (QDC), padrão Neoenergia, reparo de curto-circuito, disjuntores e iluminação cênica.</p>
+                
+                <!-- Trust & Conversion Signals -->
+                <div class="hero-trust-badges">
+                    <div class="trust-badge-item">
+                        <span class="trust-icon">⭐</span>
+                        <div class="trust-text">
+                            <strong>5.0 no Google</strong>
+                            <span>+250 clientes no DF</span>
+                        </div>
+                    </div>
+                    <div class="trust-badge-item">
+                        <span class="trust-icon">🛡️</span>
+                        <div class="trust-text">
+                            <strong>Padrão NBR 5410</strong>
+                            <span>Garantia & Laudo</span>
+                        </div>
+                    </div>
+                    <div class="trust-badge-item">
+                        <span class="trust-icon">⚡</span>
+                        <div class="trust-text">
+                            <strong>Plantão Rápido</strong>
+                            <span>Chegada em até 45 min</span>
+                        </div>
+                    </div>
+                    <div class="trust-badge-item">
+                        <span class="trust-icon">💳</span>
+                        <div class="trust-text">
+                            <strong>Até 12x no Cartão</strong>
+                            <span>Ou Pix com desconto</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="hero-actions">
-                    <a href="#cookbook" class="btn btn-large btn-primary-gold" id="btn-hero-explore">Explorar Receitas Elétricas</a>
-                    <a href="#simulador" class="btn btn-large btn-outline" id="btn-hero-sim">Simular Diagnóstico</a>
+                    <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20BSB%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%2C%20preciso%20de%20um%20eletricista%20em%20Bras%C3%ADlia." target="_blank" class="btn btn-large btn-primary-gold btn-hero-wa" id="btn-hero-wa">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+                        </svg>
+                        <span>Chamar no WhatsApp (15 min)</span>
+                    </a>
+                    <a href="#orcamento-rapido" class="btn btn-large btn-outline" id="btn-hero-form">Pedir Orçamento Rápido</a>
+                    <a href="#simulador" class="btn btn-large btn-ghost" id="btn-hero-sim">Simular Diagnóstico</a>
                 </div>
             </div>
             <div class="hero-visual-wrapper">
@@ -114,6 +196,75 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Quote Express Section -->
+    <section id="orcamento-rapido" class="quick-quote-section">
+        <div class="container">
+            <div class="quote-card">
+                <div class="quote-header">
+                    <span class="badge badge-gold">Atendimento Imediato no DF</span>
+                    <h2 class="quote-title">Solicite seu Orçamento Técnico sem Compromisso</h2>
+                    <p class="quote-desc">Preencha os campos abaixo para receber o retorno imediato do Engenheiro Adão no WhatsApp em até 15 minutos.</p>
+                </div>
+                <form id="quick-quote-form" class="quote-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="lead-name">Seu Nome</label>
+                            <input type="text" id="lead-name" placeholder="Ex: Dr. Roberto ou Camila" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lead-phone">WhatsApp com DDD</label>
+                            <input type="tel" id="lead-phone" placeholder="Ex: (61) 99697-6564" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lead-service">Tipo de Serviço</label>
+                            <select id="lead-service" required>
+                                <option value="" disabled selected>Selecione a necessidade...</option>
+                                <option value="Urgência / Disjuntor caindo / Curto-circuito">⚡ Urgência (Disjuntor caindo / Curto / Sem Luz)</option>
+                                <option value="Troca / Montagem de Quadro de Distribuição (QDC)">🔧 Montagem / Reforma de Quadro (QDC)</option>
+                                <option value="Instalação / Desmembramento Padrão Neoenergia">🏢 Padrão Neoenergia (CEB) / Aumento de Carga</option>
+                                <option value="Fiação para Chuveiro / Circuitos Dedicados">🚿 Fiação de Chuveiro / Circuitos Dedicados</option>
+                                <option value="Iluminação Cênica e Fitas LED Dimerizáveis">💡 Iluminação Cênica & Fitas LED Dimerizáveis</option>
+                                <option value="Laudo Elétrico / Termografia FLIR">📋 Laudo Técnico / Termografia com Câmera FLIR</option>
+                                <option value="Outro serviço elétrico residencial/predial">🛠️ Outro serviço elétrico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="lead-bairro">Bairro / Região em Brasília</label>
+                            <input type="text" id="lead-bairro" placeholder="Ex: Lago Sul, Asa Norte, Águas Claras..." required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary-gold btn-block btn-quote-submit" id="btn-submit-lead">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+                        </svg>
+                        <span>Enviar Pedido de Orçamento no WhatsApp</span>
+                    </button>
+                    <p class="form-disclaimer">🔒 Resposta rápida direta com o responsável técnico. Sem intermediários.</p>
+                </form>
+            </div>
+
+            <!-- Coverage Badges / Relevância Local para Google Ads -->
+            <div class="coverage-banner">
+                <span class="coverage-title">📍 Regiões Atendidas com Prontidão no Distrito Federal:</span>
+                <div class="coverage-pills">
+                    <span class="coverage-pill">Lago Sul</span>
+                    <span class="coverage-pill">Lago Norte</span>
+                    <span class="coverage-pill">Asa Sul</span>
+                    <span class="coverage-pill">Asa Norte</span>
+                    <span class="coverage-pill">Sudoeste</span>
+                    <span class="coverage-pill">Noroeste</span>
+                    <span class="coverage-pill">Park Way</span>
+                    <span class="coverage-pill">Águas Claras</span>
+                    <span class="coverage-pill">Guará</span>
+                    <span class="coverage-pill">Taguatinga</span>
+                    <span class="coverage-pill">Vicente Pires</span>
+                    <span class="coverage-pill">Sobradinho</span>
+                    <span class="coverage-pill">Planaltina</span>
                 </div>
             </div>
         </div>
@@ -485,6 +636,43 @@
         </div>
     </section>
 
+    <!-- FAQ / Dúvidas Frequentes -->
+    <section id="faq" class="section-padding dark-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-category text-gold">Dúvidas Frequentes</span>
+                <h2 class="section-title">Perguntas Rápidas sobre o Atendimento</h2>
+                <p class="section-description">Transparência total para você tomar sua decisão com segurança.</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h4>⚡ Em quanto tempo o eletricista chega para emergências?</h4>
+                    <p>Para emergências no Plano Piloto (Asa Sul, Asa Norte, Sudoeste, Noroeste, Lago Sul/Norte), o tempo médio de chegada é de <strong>30 a 45 minutos</strong> após confirmação no WhatsApp.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>📋 Vocês emitem nota fiscal e laudo técnico?</h4>
+                    <p>Sim. Todos os serviços contam com emissão de nota fiscal e, quando solicitado, emitimos Laudo Técnico de Conformidade NBR 5410 assinado pelo Engenheiro Responsável.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>🛡️ Qual a garantia dos serviços executados?</h4>
+                    <p>Garantia integral sobre a mão de obra técnica executada e suporte pós-serviço com verificação dinamométrica e termográfica.</p>
+                </div>
+                <div class="faq-card">
+                    <h4>💳 Quais são as formas de pagamento?</h4>
+                    <p>Aceitamos Pix com desconto à vista, cartões de crédito em até 12x, débito e transferência bancária para pessoas físicas e empresas.</p>
+                </div>
+            </div>
+
+            <div class="faq-cta text-center mt-3">
+                <p>Ainda tem alguma dúvida específica sobre seu projeto?</p>
+                <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20BSB%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20um%20servi%C3%A7o." target="_blank" class="btn btn-primary-gold" id="btn-faq-wa">
+                    Tirar Dúvida no WhatsApp Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="footer">
         <div class="footer-bg-glow"></div>
@@ -512,7 +700,9 @@
                     <li><a href="#">Início</a></li>
                     <li><a href="#cookbook">Catálogo de Soluções</a></li>
                     <li><a href="#simulador">Simulador de Diagnóstico</a></li>
-                    <li><a href="#portfolio">Nosso Trabalho (Fotos & Vídeos)</a></li>
+                    <li><a href="#orcamento-rapido">Orçamento Expresso</a></li>
+                    <li><a href="#faq">Dúvidas Frequentes</a></li>
+                    <li><a href="#portfolio">Nosso Trabalho</a></li>
                 </ul>
             </div>
             
@@ -521,23 +711,46 @@
                 <ul>
                     <li><strong>Responsável Técnico:</strong> Adão</li>
                     <li><strong>WhatsApp:</strong> (61) 99697-6564</li>
-                    <li><strong>Área de Atendimento:</strong> Brasília - DF (Lago Sul, Lago Norte, Noroeste, Sudoeste, Park Way, Planaltina, Sobradinho, Águas Claras e Entorno)</li>
-                    <li><strong>Horário:</strong> Segunda a Sábado - 08h às 19h (Emergências sob consulta)</li>
+                    <li><strong>Telefone:</strong> (61) 99697-6564</li>
+                    <li><strong>Área de Atendimento:</strong> Todo o Distrito Federal (Lago Sul, Lago Norte, Asa Sul, Asa Norte, Noroeste, Sudoeste, Park Way, Águas Claras, Guará, Taguatinga, Sobradinho, Planaltina)</li>
+                    <li><strong>Horário:</strong> Segunda a Sábado - 08h às 19h (Emergências e Plantão sob consulta)</li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 BSB Soluções Elétricas. Todos os direitos reservados. Projetado seguindo padrões máximos de engenharia e segurança ABNT.</p>
+            <p>&copy; 2026 BSB Soluções Elétricas. Todos os direitos reservados. Serviços em conformidade com as normas ABNT NBR 5410.</p>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Action Button -->
-    <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20BSB%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico." target="_blank" class="wa-floating-btn" aria-label="Falar no WhatsApp" id="floating-whatsapp">
-        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
-        </svg>
-    </a>
+    <!-- WhatsApp Floating Action Button with Status -->
+    <div class="wa-floating-wrapper">
+        <span class="wa-floating-status">
+            <span class="status-pulse-dot"></span>
+            Adão Online • Resposta em 5 min
+        </span>
+        <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20BSB%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%2C%20gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20t%C3%A9cnico." target="_blank" class="wa-floating-btn" aria-label="Falar no WhatsApp" id="floating-whatsapp">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Mobile Sticky Dual Conversion Bar (Apenas em Celulares) -->
+    <div class="mobile-sticky-cta-bar" id="mobile-sticky-bar">
+        <a href="tel:+5561996976564" class="sticky-cta-btn sticky-call" id="sticky-btn-call">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.02l-2.23 2.09z"/>
+            </svg>
+            <span>Ligar Agora</span>
+        </a>
+        <a href="https://wa.me/5561996976564?text=Ol%C3%A1%20BSB%20Solu%C3%A7%C3%B5es%20El%C3%A9tricas%2C%20preciso%20de%20um%20eletricista%20urgente%20em%20Bras%C3%ADlia." target="_blank" class="sticky-cta-btn sticky-whatsapp" id="sticky-btn-wa">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.455L0 24zm6.59-4.846c1.6.95 3.197 1.45 4.817 1.452 5.53 0 10.028-4.492 10.031-10.02 0-2.678-1.042-5.193-2.936-7.09C16.666 1.6 14.156.557 11.477.556 5.948.556 1.45 5.048 1.446 10.58c-.001 1.745.456 3.447 1.326 4.96L1.768 21.84l6.495-1.704-.616.318zm11.233-7.58c-.3-.15-1.772-.875-2.046-.975-.276-.1-.476-.15-.676.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.175-.3-.018-.463.13-.61.135-.133.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.589-.493-.51-.676-.519-.174-.008-.373-.01-.572-.01-.2 0-.526.075-.801.374-.275.3-1.05 1.025-1.05 2.5 0 1.475 1.075 2.9 1.225 3.1.15.2 2.11 3.22 5.116 4.52.715.31 1.273.495 1.708.634.717.228 1.37.195 1.887.118.577-.087 1.772-.725 2.022-1.425.25-.7.25-1.3 0-1.425-.075-.125-.275-.2-.575-.35z"/>
+            </svg>
+            <span>WhatsApp Plantão</span>
+        </a>
+    </div>
 
     <!-- Custom Script -->
     <script src="script.js"></script>

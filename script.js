@@ -1,4 +1,27 @@
 /* ==========================================================================
+   GOOGLE ADS & ANALYTICS CONVERSION TRACKING ENGINE
+   ========================================================================== */
+function trackConversion(actionName, labelText, value = 0) {
+    try {
+        if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {
+                'event_category': 'PaidTraffic_Conversion',
+                'event_action': actionName,
+                'event_label': labelText,
+                'value': value
+            });
+            gtag('event', 'generate_lead', {
+                'event_category': 'Leads',
+                'event_label': labelText
+            });
+        }
+        console.log(`[Google Tag Event Dispatched] Action: "${actionName}" | Label: "${labelText}"`);
+    } catch (err) {
+        console.warn('[Google Tag Error]', err);
+    }
+}
+
+/* ==========================================================================
    RECIPES DATABASE (THE BSB ELECTRICAL COOKBOOK)
    ========================================================================== */
 const RECIPES = [
@@ -461,14 +484,14 @@ function renderPortfolio(items) {
         let mediaHtml = '';
         if (item.type === 'video') {
             mediaHtml = `
-                <video src="${item.path}" class="portfolio-media" muted loop></video>
+                <video src="${item.path}" class="portfolio-media" muted loop preload="none" playsinline></video>
                 <div class="portfolio-video-badge">
                     <span class="video-badge-dot"></span>
                     Vídeo
                 </div>
             `;
         } else {
-            mediaHtml = `<img src="${item.path}" alt="${item.title}" class="portfolio-media" loading="lazy">`;
+            mediaHtml = `<img src="${item.path}" alt="${item.title}" class="portfolio-media" loading="lazy" decoding="async">`;
         }
         
         gridItem.innerHTML = `
@@ -584,11 +607,11 @@ function openRecipeModal(id) {
             
             if (isVideo) {
                 elementWrapper.innerHTML = `
-                    <video src="${filePath}" class="modal-media-element" controls muted style="cursor: pointer;"></video>
+                    <video src="${filePath}" class="modal-media-element" controls muted preload="none" playsinline style="cursor: pointer;"></video>
                 `;
             } else {
                 elementWrapper.innerHTML = `
-                    <img src="${filePath}" alt="${recipe.title}" class="modal-media-element">
+                    <img src="${filePath}" alt="${recipe.title}" class="modal-media-element" loading="lazy" decoding="async">
                 `;
             }
             
@@ -662,11 +685,11 @@ function openLightbox(index) {
     
     if (item.type === 'video') {
         lightboxContent.innerHTML = `
-            <video src="${item.path}" controls autoplay style="width: 100%; max-height: 75vh;"></video>
+            <video src="${item.path}" controls autoplay playsinline style="width: 100%; max-height: 75vh;"></video>
         `;
     } else {
         lightboxContent.innerHTML = `
-            <img src="${item.path}" alt="${item.title}">
+            <img src="${item.path}" alt="${item.title}" decoding="async">
         `;
     }
     
@@ -805,6 +828,9 @@ function showDiagnosisReport(symptom) {
     // Hide Loading, Show Result
     simStepLoading.classList.remove('active');
     simStepResult.classList.add('active');
+    
+    // Google Tag Conversion: Simulator completed
+    trackConversion('diagnosis_completed', `Simulador: ${symptom}`);
 }
 
 btnSimReset.addEventListener('click', () => {
@@ -814,7 +840,7 @@ btnSimReset.addEventListener('click', () => {
 });
 
 /* ==========================================================================
-   EVENT LISTENERS SETUP
+   EVENT LISTENERS SETUP & CONVERSION TRACKING
    ========================================================================== */
 function setupEventListeners() {
     // Menu mobile toggle
@@ -835,6 +861,52 @@ function setupEventListeners() {
         });
     });
     
+    // Quick Quote Express Form Handler
+    const quickQuoteForm = document.getElementById('quick-quote-form');
+    if (quickQuoteForm) {
+        quickQuoteForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('lead-name').value.trim();
+            const phone = document.getElementById('lead-phone').value.trim();
+            const service = document.getElementById('lead-service').value;
+            const bairro = document.getElementById('lead-bairro').value.trim();
+            
+            // Trigger Google Tag conversion
+            trackConversion('lead_form_submitted', `Form Lead: ${service}`);
+            
+            const message = `Olá Engenheiro Adão! Solicito orçamento técnico pelo site da BSB Elétrica:\n\n👤 *Nome:* ${name}\n📱 *WhatsApp:* ${phone}\n⚡ *Serviço:* ${service}\n📍 *Região/Bairro:* ${bairro}`;
+            const targetUrl = `https://wa.me/5561996976564?text=${encodeURIComponent(message)}`;
+            
+            // Open WhatsApp in new tab
+            window.open(targetUrl, '_blank');
+        });
+    }
+
+    // Attach tracking to conversion buttons
+    const conversionButtons = [
+        { id: 'top-bar-phone', action: 'phone_call_click', label: 'Top Bar Phone' },
+        { id: 'btn-header-call', action: 'phone_call_click', label: 'Header Call Button' },
+        { id: 'btn-header-wa', action: 'whatsapp_click', label: 'Header WhatsApp' },
+        { id: 'btn-hero-wa', action: 'whatsapp_click', label: 'Hero WhatsApp' },
+        { id: 'btn-sim-wa-cta', action: 'whatsapp_click', label: 'Simulator Result WhatsApp' },
+        { id: 'modal-wa-cta', action: 'whatsapp_click', label: 'Recipe Modal WhatsApp' },
+        { id: 'btn-portfolio-wa', action: 'whatsapp_click', label: 'Portfolio Section WhatsApp' },
+        { id: 'btn-sobre-wa', action: 'whatsapp_click', label: 'About Section WhatsApp' },
+        { id: 'btn-faq-wa', action: 'whatsapp_click', label: 'FAQ Section WhatsApp' },
+        { id: 'floating-whatsapp', action: 'whatsapp_click', label: 'Floating WhatsApp' },
+        { id: 'sticky-btn-call', action: 'phone_call_click', label: 'Mobile Sticky Call' },
+        { id: 'sticky-btn-wa', action: 'whatsapp_click', label: 'Mobile Sticky WhatsApp' }
+    ];
+
+    conversionButtons.forEach(btnConfig => {
+        const el = document.getElementById(btnConfig.id);
+        if (el) {
+            el.addEventListener('click', () => {
+                trackConversion(btnConfig.action, btnConfig.label);
+            });
+        }
+    });
+
     // Modal close hooks
     modalCloseBtn.addEventListener('click', closeRecipeModal);
     recipeModal.addEventListener('click', (e) => {
