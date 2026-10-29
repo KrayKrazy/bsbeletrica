@@ -888,6 +888,7 @@ function setupEventListeners() {
         { id: 'btn-header-call', action: 'phone_call_click', label: 'Header Call Button' },
         { id: 'btn-header-wa', action: 'whatsapp_click', label: 'Header WhatsApp' },
         { id: 'btn-hero-wa', action: 'whatsapp_click', label: 'Hero WhatsApp' },
+        { id: 'btn-dispatch-plantao', action: 'whatsapp_click', label: 'Hero Dispatch Panel WhatsApp' },
         { id: 'btn-sim-wa-cta', action: 'whatsapp_click', label: 'Simulator Result WhatsApp' },
         { id: 'modal-wa-cta', action: 'whatsapp_click', label: 'Recipe Modal WhatsApp' },
         { id: 'btn-portfolio-wa', action: 'whatsapp_click', label: 'Portfolio Section WhatsApp' },
