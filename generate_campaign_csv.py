@@ -14,7 +14,7 @@ target_files = [
 campaign_name = "BSB Elétrica - Captação Fundo de Funil"
 campaign_budget = "25.00"
 default_cpc = "3.50"
-final_url = "https://bsbeletrica.netlify.app/"
+final_url = "https://bsbeletrica.vercel.app/"
 
 headers = [
     "Row Type", "Action", "Campaign status", "Campaign", "Campaign type", "Budget", "Bid Strategy Type", "EU political ads",
