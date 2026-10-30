@@ -17,7 +17,7 @@ default_cpc = "3.50"
 final_url = "https://bsbeletrica.netlify.app/"
 
 headers = [
-    "Row Type", "Action", "Campaign status", "Campaign", "Campaign type", "Budget", "Bid Strategy Type",
+    "Row Type", "Action", "Campaign status", "Campaign", "Campaign type", "Budget", "Bid Strategy Type", "EU political ads",
     "Ad group status", "Ad group", "Default max. CPC", "Max CPC",
     "Keyword status", "Keyword", "Type",
     "Ad status", "Headline 1", "Headline 2", "Headline 3", "Headline 4", "Headline 5",
@@ -172,7 +172,8 @@ rows.append(make_row({
     "Campaign": campaign_name,
     "Campaign type": "Search",
     "Budget": campaign_budget,
-    "Bid Strategy Type": "Manual CPC"
+    "Bid Strategy Type": "Manual CPC",
+    "EU political ads": "No"
 }))
 
 # 2. Ad Group Rows
